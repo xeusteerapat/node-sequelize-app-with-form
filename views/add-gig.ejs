@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <title>Add Gig</title>
+  </head>
+
+  <body>
+    <div class="ui container">
+      <div class="ui three item menu">
+        <a class="active item" href="/">Home</a>
+        <a class="item" href="/gigs/add-gig">Add A Gig</a>
+        <a class="item" href="/gigs">All Gigs</a>
+      </div>
+      <h1>Add A Gig</h1>
+      <form class="ui form" action="/gigs/add-gig" method="POST">
+        <div class="field">
+          <label>Title</label>
+          <input type="text" name="title" placeholder="Title" />
+        </div>
+        <div class="field">
+          <label>Technologies</label>
+          <input type="text" name="technologies" placeholder="Technologies" />
+        </div>
+        <div class="field">
+          <label>Budget</label>
+          <input type="number" name="budget" />
+        </div>
+        <div class="field">
+          <label>Contact Email</label>
+          <input type="text" name="contactEmail" placeholder="Contact Email" />
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea spellcheck="false" name="description"></textarea>
+        </div>
+        <button class="ui button green" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

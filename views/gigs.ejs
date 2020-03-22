@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <title>Gigs Finder</title>
+  </head>
+
+  <body>
+    <div class="ui container">
+      <div class="ui three item menu">
+        <a class="active item" href="/">Home</a>
+        <a class="item" href="/gigs/add-gig">Add A Gig</a>
+        <a class="item" href="/gigs">All Gigs</a>
+      </div>
+      <h1>All Gigs</h1>
+        <% for (let gig of gigs) {%>
+      <div class="ui message">
+        <div class="header">
+          <%=gig.title%>
+        </div>
+        <ul class="list">
+          <li><%=gig.technologies%></li>
+          <li><%=gig.budget%></li>
+          <li><%=gig.contactEmail%></li>
+          <p>Description</p>
+            <%=gig.description%>
+          </p>
+        </ul>
+      </div>
+    <%}%>
+    </div>
+  </body>
+</html>
